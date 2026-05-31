@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "FitVaga.API.Controllers.AnaliseController",
+    "Method": "Analisar",
+    "RelativePath": "api/Analise",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FitVaga.API.DTOs.AnaliseFitRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitVaga.API.Controllers.CurriculosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Curriculos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitVaga.API.Controllers.CurriculosController",
+    "Method": "Create",
+    "RelativePath": "api/Curriculos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "curriculo",
+        "Type": "FitVaga.API.Models.Curriculo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FitVaga.API.Controllers.CurriculosController",
+    "Method": "GetById",
+    "RelativePath": "api/Curriculos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

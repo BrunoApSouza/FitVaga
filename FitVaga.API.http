@@ -1,0 +1,6 @@
+@FitVaga.API_HostAddress = http://localhost:5081
+
+GET {{FitVaga.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
