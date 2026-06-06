@@ -50,8 +50,6 @@ public class AnaliseFitService
         var response = await _httpClient.PostAsync(url, content);
         var responseString = await response.Content.ReadAsStringAsync();
 
-        Console.WriteLine("RESPOSTA GEMINI: " + responseString);
-
         var responseJson = JsonDocument.Parse(responseString);
 
         // Verifica se teve erro na resposta do Gemini
