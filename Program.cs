@@ -8,13 +8,28 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var connectionString =
+    builder.Configuration.GetConnectionString("DefaultConnection");
+
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException(
+        "ConnectionStrings:DefaultConnection não configurada.");
+}
+
+var connectionBuilder =
+    new Npgsql.NpgsqlConnectionStringBuilder(connectionString);
+
+Console.WriteLine($"DB Host: {connectionBuilder.Host}");
+Console.WriteLine($"DB User: {connectionBuilder.Username}");
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddHttpClient<AnaliseFitService>();
 
 builder.Services.AddCors(options =>
-{ 
+{
     options.AddPolicy("AllowAll", policy =>
         policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });

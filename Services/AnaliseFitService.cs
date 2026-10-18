@@ -17,16 +17,16 @@ public class AnaliseFitService
 
     public async Task<AnaliseFitResponse> AnalisarFit(string curriculo, string descricaoVaga)
     {
-        var prompt = "Você é um especialista em RH e recrutamento.\n\n" +
-                    "Analise a compatibilidade entre o currículo e a vaga abaixo e retorne APENAS um JSON válido com esta estrutura, sem markdown, sem texto adicional:\n" +
+        var prompt = "Vocï¿½ ï¿½ um especialista em RH e recrutamento.\n\n" +
+                    "Analise a compatibilidade entre o currï¿½culo e a vaga abaixo e retorne APENAS um JSON vï¿½lido com esta estrutura, sem markdown, sem texto adicional:\n" +
                     "{\n" +
-                    "  \"scoreFit\": (número de 0 a 100),\n" +
-                    "  \"pontosFortres\": \"pontos fortes do candidato para esta vaga\",\n" +
-                    "  \"gaps\": \"o que está faltando no perfil\",\n" +
-                    "  \"cartaApresentacao\": \"carta de apresentação personalizada\"\n" +
+                    "  \"scoreFit\": (nï¿½mero de 0 a 100),\n" +
+                    "  \"pontosFortes\": \"pontos fortes do candidato para esta vaga\",\n" +
+                    "  \"gaps\": \"o que estï¿½ faltando no perfil\",\n" +
+                    "  \"cartaApresentacao\": \"carta de apresentaï¿½ï¿½o personalizada\"\n" +
                     "}\n\n" +
-                    "CURRÍCULO:\n" + curriculo + "\n\n" +
-                    "DESCRIÇÃO DA VAGA:\n" + descricaoVaga;
+                    "CURRï¿½CULO:\n" + curriculo + "\n\n" +
+                    "DESCRIï¿½ï¿½O DA VAGA:\n" + descricaoVaga;
 
         var requestBody = new
         {
